@@ -1,24 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Randomizer from './pages/Randomizer.js';
+import Home from './pages/Home.js';
+import Error from './pages/Error.js';
+import Navigation from './navigation/Navigation.js';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <div>
+          <Navigation />
+            <Switch>
+             <Route path="/" component={Home} exact/>
+             <Route path="/randomizer" component={(Randomizer)}/>
+            <Route component={Error}/>
+           </Switch>
+        </div> 
+      </BrowserRouter>
     </div>
   );
 }
