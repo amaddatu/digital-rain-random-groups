@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import logo from '../logo.svg';
+import '../randomizer/randomizer.scss';
 
 class Randomizer extends Component {
     render() {
         return (
             <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
+                <img src={"/images/pog-circle.svg"} className="pog" alt="POGGER" />
                 <p>
                     Randomizer Page
                 </p>
