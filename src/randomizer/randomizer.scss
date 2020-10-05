@@ -1,6 +1,40 @@
+@import '../util/flexbox.scss';
 $bgcolor: black;
+.influence-sphere{
+    @include flexbox;
+    max-width: 600px;
+    @include flex-wrap(wrap)
+}
 .pog{
     background-color: $bgcolor;
-    width: 100px;
-    height: 100px;
+    width: 20px;
+    height: 20px;
+}
+.pog-top-left{
+    transform: translateX(-2px) translateY(-2px) rotateX(-45deg) rotateY(45deg);
+}
+.pog-top-center{
+    transform: translateY(-3px) rotateX(38deg);
+}
+.pog-top-right{
+    transform: translateX(2px) translateY(-2px) rotateX(45deg) rotateY(45deg);
+}
+
+.pog-mid-left{
+    transform: translateX(-2px) rotateY(38deg);
+}
+.pog-mid-center{
+    
+}
+.pog-mid-right{
+    transform: translateX(2px) rotateY(-38deg);
+}
+.pog-bot-left{
+    transform: translateX(-2px) translateY(2px) rotateX(-45deg) rotateY(-45deg);
+}
+.pog-bot-center{
+    transform: translateY(3px) rotateX(-38deg);
+}
+.pog-bot-right{
+    transform: translateX(2px) translateY(2px) rotateX(-45deg) rotateY(45deg);
 }
