@@ -9,6 +9,7 @@ $bgcolor: black;
     background-color: $bgcolor;
     width: 20px;
     height: 20px;
+    transition: transform 0.2s linear;
 }
 .pog-top-left{
     transform: translateX(-2px) translateY(-2px) rotateX(-45deg) rotateY(45deg);
@@ -24,7 +25,7 @@ $bgcolor: black;
     transform: translateX(-2px) rotateY(38deg);
 }
 .pog-mid-center{
-    
+    transform: scale(0.75, 0.75);
 }
 .pog-mid-right{
     transform: translateX(2px) rotateY(-38deg);
